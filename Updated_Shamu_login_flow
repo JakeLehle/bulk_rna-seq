@@ -1,0 +1,53 @@
+# to login to SHAMU (this is the UTSA super computing cluster) on your linux machine
+$ ssh abc123@login.shamu.utsa.edu -p1209
+
+# SHAMU will then ask for your password so type that in and you are in.
+# load your environment
+$ module load slurm
+
+# to obtain a computer for you to start running jobs on type you need to request it
+$ srun --time=03-00:00:00 --nodes=1 --pty bash
+
+#Here is the header section of any job files you need to running
+
+#!/bin/bash -l
+
+#SBATCH -J fastq_dump
+#SBATCH -o 38613.log
+#SBATCH -e 38613.log
+#SBATCH --mail-user your.email@my.utsa.edu
+#SBATCH --mail-type=ALL
+#SBATCH -t 72:00:00
+#SBATCH -p normal
+#SBATCH --ntasks=1
+#SBATCH --partition=defq
+#SBATCH --cpus-per-task=4
+#SBATCH --nodes=1
+
+. /etc/profile.d/modules.sh
+# Load one of these
+module load somemoudule/1.10.1
+
+
+cd /work/abc123/
+
+exit
+
+
+#This can take some time usually for a node to be assigned to you so you just have to wait
+#Once you get a computer cd to the dir you want to run your code in and make sure to run this is you are moving the file from windows into unix
+dos2unix filename.txt
+
+# now you are ready to submit your job which you can do by running
+$ sbatch jobname.txt
+
+# to check to see how your job is going run
+$ squeue
+#this will show you just your job and how long it has been running
+$ squeue -u abc123
+
+# if you need to check what modules are available and the versions that installed currently on SHAMU
+$ . /etc/profile.d/modules.sh
+$ module avail
+
+exit

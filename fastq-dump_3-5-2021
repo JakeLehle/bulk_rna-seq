@@ -1,0 +1,49 @@
+#!/bin/bash -l
+
+#SBATCH -J fastq_dump
+#SBATCH -o qsub_job.log
+#SBATCH -e qsub_job.log
+#SBATCH --mail-user your.name@my.utsa.edu
+#SBATCH --mail-type=ALL
+#SBATCH -t 72:00:00
+#SBATCH -p normal
+#SBATCH --ntasks=1
+#SBATCH --partition=defq
+#SBATCH --cpus-per-task=4
+#SBATCH --nodes=1
+
+. /etc/profile.d/modules.sh
+# Load one of these
+module load sratoolkit/2.10.5
+
+
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR7852754
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR7852755
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR7852756
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR6847855
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR6847856
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR6847857
+fastq-dump -O /work/abc123/RNA_seq SRR5008775
+fastq-dump -O /work/abc123/RNA_seq SRR5008776
+fastq-dump -O /work/abc123/RNA_seq SRR5008777
+fastq-dump -O /work/abc123/RNA_seq SRR5008783
+fastq-dump -O /work/abc123/RNA_seq SRR5008784
+fastq-dump -O /work/abc123/RNA_seq SRR5008786
+fastq-dump -O /work/abc123/RNA_seq SRR8689526
+fastq-dump -O /work/abc123/RNA_seq SRR8689528
+fastq-dump -O /work/abc123/RNA_seq SRR8689529
+fastq-dump -O /work/abc123/RNA_seq SRR8689530
+fastq-dump -O /work/abc123/RNA_seq SRR8689531
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR9109813
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR9109814
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR9109815
+fastq-dump -O /work/abc123/RNA_seq SRR3391140
+fastq-dump -O /work/abc123/RNA_seq SRR3391141
+fastq-dump -O /work/abc123/RNA_seq SRR3391143
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR1783798
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR1783799
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR1783800
+
+
+
+exit

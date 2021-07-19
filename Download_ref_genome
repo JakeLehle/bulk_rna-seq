@@ -1,0 +1,34 @@
+#To download the mm39 reference genome go to
+https://www.ncbi.nlm.nih.gov/assembly/
+#Select out your particular organism
+
+#When you download the .fna from NCBI file it will be saves in a .tar archive files
+#to extract out just the .fna dir first look inside of the .tar dir to see it's contents
+
+tar -tf name_of_the_tar_file.tar
+#once you see the directory you want to pull out run
+tar -xvf name_of_the_tar_file.tar dir_you_want_to_pull_out.fna.gz
+
+#you can see that the .fna file is also compressed via gzip so to unzip that file
+#cd into the new created dir and run gunzip
+
+gunzip dir_you_want_to_pull_out.fna.gz
+
+#the file should now be unzipped and ready to use as a reference genome.
+
+#what if the tar archive is also gzipped? well that's fine just filter the file through the -x gunzip function as a part of the tar function. that command would look like.
+tar -xzvf name_of_the_tar_file.tar.gz
+##################################################################################
+
+#If you want to use the inbuilt mm10 annotation file in the Rsubread package you need to download the ref genome from UCSC
+http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/
+#Do down to the bottom of the page and select the mm10.fa.gz file
+#Download the file and then move it onto SHAMU
+#If you wanna be cool, you can ftp the file directly to SHAMU but that can be tricky so downloading and then moving the file over with filezilla is easier for most people just starting out
+#Once you have the file in the correct dir you need to unzip the compressed mm10.fa.gz file format using the gunzip function
+
+gunzip mm10.fa.gz
+
+#the file should now be unzipped and ready to use as a reference genome.
+
+exit

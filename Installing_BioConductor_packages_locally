@@ -1,0 +1,16 @@
+# Here is how to install Bioconductor packages locally in SHAMU
+# Do this in the interactive BASH terminal
+# You have to be using R/3.5.1 for this to work any of the newer versions of R will be a fatal error and kill the program
+
+$ . /etc/profile.d/modules.sh
+# Load one of these
+$ module load R/3.5.1
+
+$ source("https://bioconductor.org/biocLite.R")
+
+# now use the bioLite(c("")) command to pull in any Bioconductor package and save in locally
+$ biocLite(c("DESeq2", "Rsubread"))
+
+# Save all of this and now when you run your Rscript you only have to use the library(DESeq2) or library(Rsubread) command to call those packages
+
+exit
