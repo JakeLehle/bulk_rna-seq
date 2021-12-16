@@ -1,1 +1,46 @@
+#!/bin/bash
 
+#SBATCH -J fastq_dump                      # Job name
+#SBATCH -o qsub_job.log                    # Name of the stdout output file
+#SBATCH -e qsub_job.log                    # Name of the stderr error file
+#SBATCH --mail-user=your.name@my.utsa.edu  # Send me an email when you are done
+#SBATCH --mail-type=ALL
+#SBATCH -t 72:00:00                        # Time of job
+#SBATCH -p compute1                        # Queue (partition) name
+#SBATCH -N 1                               # Total # of nodes (must be 1 for serial)
+#SBATCH -n 1                               # Total # of mpi tasks (should be 1 for serial)
+
+# Load one of these
+module load sratoolkit/2.10.5
+
+
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR7852754
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR7852755
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR7852756
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR6847855
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR6847856
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR6847857
+fastq-dump -O /work/abc123/RNA_seq SRR5008775
+fastq-dump -O /work/abc123/RNA_seq SRR5008776
+fastq-dump -O /work/abc123/RNA_seq SRR5008777
+fastq-dump -O /work/abc123/RNA_seq SRR5008783
+fastq-dump -O /work/abc123/RNA_seq SRR5008784
+fastq-dump -O /work/abc123/RNA_seq SRR5008786
+fastq-dump -O /work/abc123/RNA_seq SRR8689526
+fastq-dump -O /work/abc123/RNA_seq SRR8689528
+fastq-dump -O /work/abc123/RNA_seq SRR8689529
+fastq-dump -O /work/abc123/RNA_seq SRR8689530
+fastq-dump -O /work/abc123/RNA_seq SRR8689531
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR9109813
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR9109814
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR9109815
+fastq-dump -O /work/abc123/RNA_seq SRR3391140
+fastq-dump -O /work/abc123/RNA_seq SRR3391141
+fastq-dump -O /work/abc123/RNA_seq SRR3391143
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR1783798
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR1783799
+fastq-dump -O /work/abc123/RNA_seq --split-files SRR1783800
+
+
+
+exit
