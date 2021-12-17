@@ -1,18 +1,15 @@
-#!/bin/bash -l
+#!/bin/bash
 
-#SBATCH -J Rsubread
-#SBATCH -o Rsubread.log
-#SBATCH -e Rsubread.log
-#SBATCH --mail-user your.name@my.utsa.edu
+#SBATCH -J fastq_dump                      # Job name
+#SBATCH -o qsub_job.log                    # Name of the stdout output file
+#SBATCH -e qsub_job.log                    # Name of the stderr error file
+#SBATCH --mail-user=your.name@my.utsa.edu  # Send me an email when you are done
 #SBATCH --mail-type=ALL
-#SBATCH -t 72:00:00
-#SBATCH -p normal
-#SBATCH --ntasks=1
-#SBATCH --partition=defq
-#SBATCH --cpus-per-task=4
-#SBATCH --nodes=1
+#SBATCH -t 72:00:00                        # Time of job
+#SBATCH -p compute1                        # Queue (partition) name
+#SBATCH -N 1                               # Total # of nodes (must be 1 for serial)
+#SBATCH -n 1                               # Total # of mpi tasks (should be 1 for serial)
 
-. /etc/profile.d/modules.sh
 # Load one of these
 module load R/3.5.1
 
