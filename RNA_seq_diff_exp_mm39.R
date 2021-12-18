@@ -1,3 +1,4 @@
+# Make sure these packages are locally installed on your user account to use them in ARC
 library(DESeq2)
 library(Rsubread)
 
@@ -237,126 +238,6 @@ align(index = "jindex",
       GTF.attrType = "gene_id",
       chrAliases = NULL)
 
-align(index = "jindex",
-      readfile1 = "/work/abc123/RNA_seq/SRR7852756_1.fastq",
-      readfile2 = "/work/abc123/RNA_seq/SRR7852756_2.fastq",
-      type = "rna",
-      input_format = "FASTQ",
-      output_format = "BAM",
-      sortReadsByCoordinates = TRUE,
-      useAnnotation = TRUE,
-      annot.ext = "/work/abc123/RNA_seq/GCF_000001635.27_GRCm39_genomic.gtf",
-      isGTF = TRUE,
-      GTF.featureType = "exon",
-      GTF.attrType = "gene_id",
-      chrAliases = NULL)
-
-align(index = "jindex",
-      readfile1 = "/work/abc123/RNA_seq/SRR8689526.fastq",
-      type = "rna",
-      input_format = "FASTQ",
-      output_format = "BAM",
-      sortReadsByCoordinates = TRUE,
-      useAnnotation = TRUE,
-      annot.ext = "/work/abc123/RNA_seq/GCF_000001635.27_GRCm39_genomic.gtf",
-      isGTF = TRUE,
-      GTF.featureType = "exon",
-      GTF.attrType = "gene_id",
-      chrAliases = NULL)
-
-align(index = "jindex",
-      readfile1 = "/work/abc123/RNA_seq/SRR8689528.fastq",
-      type = "rna",
-      input_format = "FASTQ",
-      output_format = "BAM",
-      sortReadsByCoordinates = TRUE,
-      useAnnotation = TRUE,
-      annot.ext = "/work/abc123/RNA_seq/GCF_000001635.27_GRCm39_genomic.gtf",
-      isGTF = TRUE,
-      GTF.featureType = "exon",
-      GTF.attrType = "gene_id",
-      chrAliases = NULL)
-
-align(index = "jindex",
-      readfile1 = "/work/abc123/RNA_seq/SRR8689529.fastq",
-      type = "rna",
-      input_format = "FASTQ",
-      output_format = "BAM",
-      sortReadsByCoordinates = TRUE,
-      useAnnotation = TRUE,
-      annot.ext = "/work/abc123/RNA_seq/GCF_000001635.27_GRCm39_genomic.gtf",
-      isGTF = TRUE,
-      GTF.featureType = "exon",
-      GTF.attrType = "gene_id",
-      chrAliases = NULL)
-
-align(index = "jindex",
-      readfile1 = "/work/abc123/RNA_seq/SRR8689530.fastq",
-      type = "rna",
-      input_format = "FASTQ",
-      output_format = "BAM",
-      sortReadsByCoordinates = TRUE,
-      useAnnotation = TRUE,
-      annot.ext = "/work/abc123/RNA_seq/GCF_000001635.27_GRCm39_genomic.gtf",
-      isGTF = TRUE,
-      GTF.featureType = "exon",
-      GTF.attrType = "gene_id",
-      chrAliases = NULL)
-
-align(index = "jindex",
-      readfile1 = "/work/abc123/RNA_seq/SRR8689531.fastq",
-      type = "rna",
-      input_format = "FASTQ",
-      output_format = "BAM",
-      sortReadsByCoordinates = TRUE,
-      useAnnotation = TRUE,
-      annot.ext = "/work/abc123/RNA_seq/GCF_000001635.27_GRCm39_genomic.gtf",
-      isGTF = TRUE,
-      GTF.featureType = "exon",
-      GTF.attrType = "gene_id",
-      chrAliases = NULL)
-
-align(index = "jindex",
-      readfile1 = "/work/abc123/RNA_seq/SRR9109813_1.fastq",
-      readfile2 = "/work/abc123/RNA_seq/SRR9109813_2.fastq",
-      type = "rna",
-      input_format = "FASTQ",
-      output_format = "BAM",
-      sortReadsByCoordinates = TRUE,
-      useAnnotation = TRUE,
-      annot.ext = "/work/abc123/RNA_seq/GCF_000001635.27_GRCm39_genomic.gtf",
-      isGTF = TRUE,
-      GTF.featureType = "exon",
-      GTF.attrType = "gene_id",
-      chrAliases = NULL)
-
-align(index = "jindex",
-      readfile1 = "/work/abc123/RNA_seq/SRR9109814_1.fastq",
-      readfile2 = "/work/abc123/RNA_seq/SRR9109814_2.fastq",
-      type = "rna",
-      input_format = "FASTQ",
-      output_format = "BAM",
-      sortReadsByCoordinates = TRUE,
-      useAnnotation = TRUE,
-      annot.ext = "/work/abc123/RNA_seq/GCF_000001635.27_GRCm39_genomic.gtf",
-      isGTF = TRUE,
-      GTF.featureType = "exon",
-      GTF.attrType = "gene_id",
-      chrAliases = NULL)
-
-align(index = "jindex",
-      readfile1 = "/work/abc123/RNA_seq/SRR9109815_1.fastq",
-      readfile2 = "/work/abc123/RNA_seq/SRR9109815_2.fastq",
-      type = "rna",
-      input_format = "FASTQ",
-      output_format = "BAM",
-      sortReadsByCoordinates = TRUE,
-      useAnnotation = TRUE,
-      annot.ext = "/work/abc123/RNA_seq/GCF_000001635.27_GRCm39_genomic.gtf",
-      isGTF = TRUE,
-      GTF.featureType = "exon",
-      GTF.attrType = "gene_id",
-      chrAliases = NULL)
 
 filesbam_2021 <- list.files(pattern = "\\.subread.BAM$")
 filesbam_2021
@@ -418,7 +299,7 @@ q()
 
 #Start the RNA work flow 
 
-setwd("C:/Users/jakel/Documents/UTSA/Lab/Coding/RNA-seq_Pipeline")
+setwd("C:/UTSA/Lab/Coding/RNA-seq_Pipeline")
 load("RNA_seq_diff_exp5-24-21_mm39.RData")
 save.image("RNA_seq_diff_exp5-24-21_mm39.RData")
 
