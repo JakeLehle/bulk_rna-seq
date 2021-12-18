@@ -11,7 +11,7 @@
 #SBATCH -n 1                               # Total # of mpi tasks (should be 1 for serial)
 
 # Load one of these
-module load R/3.5.1
+module load R/3.6.1
 
 cd /work/abc123/RNA_seq
 
