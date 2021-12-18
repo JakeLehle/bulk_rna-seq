@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #SBATCH -J fastq_dump                      # Job name
-#SBATCH -o qsub_job.log                    # Name of the stdout output file
-#SBATCH -e qsub_job.log                    # Name of the stderr error file
+#SBATCH -o R_job.log                       # Name of the stdout output file
+#SBATCH -e R_job.log                       # Name of the stderr error file
 #SBATCH --mail-user=your.name@my.utsa.edu  # Send me an email when you are done
 #SBATCH --mail-type=ALL
 #SBATCH -t 72:00:00                        # Time of job
@@ -15,6 +15,6 @@ module load R/3.6.1
 
 cd /work/abc123/RNA_seq
 
-Rscript RNA_seq_diff_exp5-24-21_mm39.R
+Rscript RNA_seq_diff_exp_mm39.R
 
 exit
