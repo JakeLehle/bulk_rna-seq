@@ -25,6 +25,8 @@ http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/
 #Do down to the bottom of the page and select the mm10.fa.gz file
 #Download the file and then move it onto SHAMU
 #If you wanna be cool, you can ftp the file directly to your HPC cluster but that can be tricky so downloading and then moving the file over with filezilla is easier for most people just starting out
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/635/GCA_000001635.9_GRCm39/GCA_000001635.9_GRCm39_genomic.fna.gz
+
 #Once you have the file in the correct dir you need to unzip the compressed mm10.fa.gz file format using the gunzip function
 
 gunzip mm10.fa.gz
