@@ -26,8 +26,8 @@ http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/
 #Download the file and then move it onto SHAMU
 #If you wanna be cool, you can ftp the file directly to your HPC cluster but that can be tricky so downloading and then moving the file over with filezilla is easier for most people just starting out
 #Here are the the ftp for the refrence genome and the annotation file found by going to  https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/635/GCA_000001635.9_GRCm39/GCA_000001635.9_GRCm39_genomic.fna.gz
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/vertebrate_mammalian/Mus_musculus/latest_assembly_versions/GCA_000001635.9_GRCm39/GCA_000001635.9_GRCm39_genomic.fna.gz
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/vertebrate_mammalian/Mus_musculus/latest_assembly_versions/GCA_000001635.9_GRCm39/GCA_000001635.9_GRCm39_genomic.gtf.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Mus_musculus/latest_assembly_versions/GCF_000001635.27_GRCm39/GCF_000001635.27_GRCm39_genomic.fna.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Mus_musculus/latest_assembly_versions/GCF_000001635.27_GRCm39/GCF_000001635.27_GRCm39_genomic.gtf.gz
 
 #Once you have the file in the correct dir you need to unzip the compressed mm10.fa.gz file format using the gunzip function
 
