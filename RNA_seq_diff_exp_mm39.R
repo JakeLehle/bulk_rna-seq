@@ -329,7 +329,7 @@ plotMD(cpm(y, log=TRUE), column=26)
 abline(h=0, col="red", lty=2, lwd=2)
 
 #To perform quasi-likelihood F-tests. The coef value is for each of the groups (so in this workflow it could be 1-10). The FDR value indicates false discovery rate so this should be very low same for the p-value. 
-fit <- glmQLFit(y,design)
+fit <- glmQLFit(y,design, robust = TRUE)
 qlf <- glmQLFTest(fit,coef=10)
 topTags(qlf)
 
